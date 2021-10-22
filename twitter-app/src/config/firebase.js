@@ -1,0 +1,33 @@
+import { initializeApp } from "firebase/app";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
+import { getFirestore, doc, setDoc, getDoc, addDoc, collection, getDocs, query,where } from "firebase/firestore";
+
+const firebaseApp = initializeApp({
+    apiKey: "AIzaSyDIJCddz99ZpgphrJt7LmGWIoDxxp-ykmU",
+    authDomain: "the-analog-b9b25.firebaseapp.com",
+    projectId: "the-analog-b9b25",
+    storageBucket: "the-analog-b9b25.appspot.com",
+    messagingSenderId: "553257649006",
+    appId: "1:553257649006:web:50b63bcaad5f27afbfb77f",
+    measurementId: "G-HZ0VP5QJY0"
+});
+
+const auth = getAuth();
+const db = getFirestore();
+
+export {
+    auth,
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    onAuthStateChanged,
+
+    db,
+    doc,
+    setDoc,
+    getDoc,
+    addDoc,
+    collection,
+    getDocs,
+    query,
+    where
+};
